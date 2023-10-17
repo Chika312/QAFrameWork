@@ -1,0 +1,20 @@
+image: maven:3-jdk-11
+
+stages:
+  - clean
+  - test
+  - report
+
+CleanProject:
+  stage: clean
+  script:
+    - mvn clean
+
+TestRun:
+  stage: test
+  script:
+    - mvn test
+AllureReport:
+  stage: report
+  script:
+    - mvn allure:report
