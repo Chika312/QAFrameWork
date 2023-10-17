@@ -1,0 +1,4 @@
+com/digitalnomads/api/apiTest/users/UserGetTest.class
+com/digitalnomads/api/apiTest/courses/CoursesGetTest.class
+com/digitalnomads/api/apiTest/users/whiremock/B.class
+com/digitalnomads/api/apiTest/BaseApiTest.class

@@ -1,4 +1,4 @@
-package org.example.api.application;
+package com.digitalnomads.api.application;
 
 public class TalentLMSBaseEndpoint {
     public final static String API_KEY = "fSlWrZLVHrtu6AP7xpXPyB4ZCC2bGZ";

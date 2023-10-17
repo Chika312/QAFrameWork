@@ -1,10 +1,10 @@
-package org.example.api.utils;
+package com.digitalnomads.api.utils;
 
-import org.example.api.entities.Category;
-import org.example.api.entities.Course;
-import org.example.api.entities.User;
+import com.digitalnomads.api.entities.Category;
+import com.digitalnomads.api.entities.Course;
+import com.digitalnomads.api.entities.User;
 
-import static org.example.api.utils.MockData.*;
+import static com.digitalnomads.api.utils.MockData.*;
 
 public class EntityManager {
     public  static User geneerateUser(){

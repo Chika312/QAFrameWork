@@ -1,9 +1,9 @@
 package com.digitalnomads.api.apiTest;
-import org.example.api.controllers.CourserController;
-import org.example.api.controllers.UserController;
+import com.digitalnomads.api.controllers.CourserController;
+import com.digitalnomads.api.controllers.UserController;
 import org.testng.annotations.BeforeSuite;
 
-import static org.example.api.application.TalentLMSBaseEndpoint.BASE_URL;
+import static com.digitalnomads.api.application.TalentLMSBaseEndpoint.BASE_URL;
 
 public class BaseApiTest {
     protected UserController userController;

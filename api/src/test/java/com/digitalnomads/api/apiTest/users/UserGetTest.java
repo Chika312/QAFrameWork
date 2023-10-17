@@ -1,9 +1,9 @@
 package com.digitalnomads.api.apiTest.users;
 
 import com.digitalnomads.api.apiTest.BaseApiTest;
-import org.example.api.application.asserts.ApiAsserst;
-import org.example.api.entities.User;
-import org.example.api.utils.EntityManager;
+import com.digitalnomads.api.application.asserts.ApiAsserst;
+import com.digitalnomads.api.entities.User;
+import com.digitalnomads.api.utils.EntityManager;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -67,22 +67,31 @@ public class UserGetTest extends BaseApiTest {
 
     @Test
     public void createAndDeleteUser() {
-        User user = EntityManager.geneerateUser();
-        userController.createUserAlwaysTime(user);
+        User expected = EntityManager.geneerateUser();
+        userController.createUserAlwaysTime(expected);
+        ApiAsserst.assertThat(userController.getResponse())
+                .isCorrectStatesCode(200)
+                .assertUser()
+                .isEqual(expected)
+                .isIdNotNull();
+
 
     }
+
     @Test
-    public void editUser(){
-        userController.getUserById("22");
-        userController.editUserNameAndPassword("22","London","London2!");
+    public void editUser() {
+        userController.getUserById("23");
+        userController.editUserNameAndPassword("23", "London", "London2!");
     }
+
     @Test
-    public  void getUserCustomField(){
+    public void getUserCustomField() {
         userController.getUserByCustomField("test");
     }
+
     @Test
-    public  void userLogIn(){
-        userController.userLogin("Chiken","Chika2525");
+    public void userLogIn() {
+        userController.userLogin("Chiken", "Chika2525");
         ApiAsserst.assertThat(userController.getResponse()).isCorrectStatesCode(200);
     }
 

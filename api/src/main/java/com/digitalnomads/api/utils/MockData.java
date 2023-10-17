@@ -1,4 +1,4 @@
-package org.example.api.utils;
+package com.digitalnomads.api.utils;
 
 import com.github.javafaker.Faker;
 

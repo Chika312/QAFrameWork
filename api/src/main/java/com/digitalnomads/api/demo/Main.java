@@ -1,4 +1,4 @@
-package org.example.api.demo;
+package com.digitalnomads.api.demo;
 
 import lombok.extern.slf4j.Slf4j;
 @Slf4j

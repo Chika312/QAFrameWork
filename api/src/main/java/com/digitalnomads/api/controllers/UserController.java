@@ -1,22 +1,18 @@
-package org.example.api.controllers;
+package com.digitalnomads.api.controllers;
 
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import lombok.extern.slf4j.Slf4j;
-import org.example.api.ApiRequest;
-import org.example.api.entities.User;
-import org.example.api.utils.EntityManager;
-import org.example.api.utils.JacksonUtils;
-import org.example.api.utils.MockData;
+import com.digitalnomads.api.ApiRequest;
+import com.digitalnomads.api.entities.User;
+import com.digitalnomads.api.utils.JacksonUtils;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
-import static org.example.api.application.TalentLMSBaseEndpoint.*;
-import static org.example.api.utils.MockData.generateLogin;
-import static org.example.api.utils.MockData.generatePassword;
+import static com.digitalnomads.api.application.TalentLMSBaseEndpoint.*;
+import static com.digitalnomads.api.utils.MockData.generateLogin;
+import static com.digitalnomads.api.utils.MockData.generatePassword;
 
 @Slf4j
 public class UserController extends ApiRequest {

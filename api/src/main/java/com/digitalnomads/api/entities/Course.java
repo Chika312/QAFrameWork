@@ -1,4 +1,4 @@
-package org.example.api.entities;
+package com.digitalnomads.api.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;

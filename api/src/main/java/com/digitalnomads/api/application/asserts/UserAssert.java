@@ -1,9 +1,9 @@
-package org.example.api.application.asserts;
+package com.digitalnomads.api.application.asserts;
 
 import io.restassured.response.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
-import org.example.api.entities.User;
+import com.digitalnomads.api.entities.User;
 @Slf4j
 public class UserAssert {
     Response response;

@@ -1,9 +1,10 @@
 package com.digitalnomads.api.apiTest.courses;
 
 import com.digitalnomads.api.apiTest.BaseApiTest;
-import org.example.api.application.asserts.ApiAsserst;
-import org.example.api.entities.Course;
-import org.example.api.utils.EntityManager;
+import com.digitalnomads.api.application.asserts.ApiAsserst;
+import com.digitalnomads.api.entities.Course;
+import com.digitalnomads.api.entities.User;
+import com.digitalnomads.api.utils.EntityManager;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -36,9 +37,21 @@ public class CoursesGetTest extends BaseApiTest {
 
     @Test
     public void createCourse() {
-        Course course = EntityManager.generateCourse();
-        courserController.createCourse(course);
+        User user = userController.createUserAlwaysTime(EntityManager.geneerateUser());
+        ApiAsserst.assertThat(userController.getResponse())
+                .isCorrectStatesCode(200)
+                .assertUser()
+                .isIdNotNull();
+        Course course = courserController.createCourse(EntityManager.generateCourse(), "3");
+        ApiAsserst.assertThat(courserController.getResponse())
+                .isCorrectStatesCode(200);
+        courserController.addUserToCourse(course, user, "learner");
         ApiAsserst.assertThat(courserController.getResponse()).isCorrectStatesCode(200);
+        userController.getUserById(user.getId());
+        ApiAsserst.assertThat(userController.getResponse())
+                .isCorrectStatesCode(200)
+                .assertUser().idIsEquals(
+                        userController.courseId("courses.id").get(0), course.getId());
     }
 
 }

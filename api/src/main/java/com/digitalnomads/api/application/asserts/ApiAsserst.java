@@ -1,6 +1,5 @@
-package org.example.api.application.asserts;
+package com.digitalnomads.api.application.asserts;
 
-import io.restassured.internal.common.assertion.Assertion;
 import io.restassured.response.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;

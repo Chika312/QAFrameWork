@@ -1,5 +1,6 @@
-package org.example.api;
+package com.digitalnomads.api;
 
+import com.digitalnomads.api.entities.BaseEntity;
 import io.restassured.RestAssured;
 import io.restassured.authentication.BasicAuthScheme;
 import io.restassured.builder.RequestSpecBuilder;
@@ -7,11 +8,9 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.example.api.entities.BaseEntity;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 

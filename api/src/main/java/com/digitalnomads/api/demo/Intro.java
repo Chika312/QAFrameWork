@@ -1,4 +1,4 @@
-package org.example.api.demo;
+package com.digitalnomads.api.demo;
 
 
 import io.restassured.RestAssured;

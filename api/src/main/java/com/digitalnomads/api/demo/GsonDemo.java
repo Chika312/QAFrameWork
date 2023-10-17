@@ -1,4 +1,4 @@
-package org.example.api.demo;
+package com.digitalnomads.api.demo;
 
 import com.google.gson.Gson;
 import org.testng.annotations.Test;

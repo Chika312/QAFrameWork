@@ -1,9 +1,8 @@
-package org.example.api.entities;
+package com.digitalnomads.api.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.github.javafaker.Faker;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -1,11 +1,9 @@
-package org.example.api.utils;
+package com.digitalnomads.api.utils;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.api.entities.BaseEntity;
-import org.example.api.entities.User;
+import com.digitalnomads.api.entities.User;
 
 public class JacksonUtils {
     private  static  final ObjectMapper objentMapper = new ObjectMapper();

@@ -1,15 +1,14 @@
-package org.example.api.controllers;
+package com.digitalnomads.api.controllers;
 
 import io.restassured.response.Response;
-import org.example.api.ApiRequest;
-import org.example.api.application.asserts.ApiAsserst;
-import org.example.api.entities.Course;
-import org.example.api.entities.User;
-import org.example.api.utils.JacksonUtils;
+import com.digitalnomads.api.ApiRequest;
+import com.digitalnomads.api.entities.Course;
+import com.digitalnomads.api.entities.User;
+import com.digitalnomads.api.utils.JacksonUtils;
 
 import java.util.HashMap;
 
-import static org.example.api.application.TalentLMSBaseEndpoint.*;
+import static com.digitalnomads.api.application.TalentLMSBaseEndpoint.*;
 
 public class CourserController extends ApiRequest {
 
